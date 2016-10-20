@@ -1,6 +1,8 @@
 import sys
+import itertools
 
 
+sys.setrecursionlimit(10000)
 def node():
     return {
         'in_nodes': [],
@@ -32,11 +34,32 @@ with open(sys.argv[1]) as file:
     k = int(sys.argv[2])
 
     kmers = []
+    kmer_counts = {}
     for read in reads:
         for i in range(len(read)):
             kmer = read[i: i + k]
-            if len(kmer) == k:
+            if 'N' not in kmer and len(kmer) == k:
                 kmers.append(kmer)
+                if kmer not in kmer_counts:
+                    kmer_counts[kmer] = 0
+                kmer_counts[kmer] += 1
+
+    kmers = [k for k in kmers if kmer_counts[k] > 3]
+
+
+    # this was for keeping track of how many types each kmer occurred
+    counts = []
+    for kmer in kmer_counts:
+        count = kmer, kmer_counts[kmer]
+        counts.append(count)
+    counts = sorted(counts, key=lambda x: x[1])
+    counts2 = []
+    for c in counts:
+        counts2.append(c[1])
+    # list of how many times kmers appeared (# of kmers once, # of kmers twice, etc...)
+    counts3 = [len(list(b)) for a, b in itertools.groupby(counts2)]
+    # print counts3
+
 
     edges = {}
     for kmer in kmers:
@@ -49,7 +72,8 @@ with open(sys.argv[1]) as file:
         edges[prefix].append(suffix)
 
     for prefix in sorted(edges.keys()):
-        print prefix + ' -> ' + ','.join(sorted(edges[prefix]))
+        # print prefix + ' -> ' + ','.join(sorted(edges[prefix]))
+        pass
 
     edge_dict = {}
     for kmer in kmers:
@@ -62,7 +86,7 @@ with open(sys.argv[1]) as file:
 
     for n in nodes:
         node = nodes[n]
-        node['branching'] = not (len(node['out_nodes']) == 1 and len(node['in_nodes']) == 1)
+        node['branching'] = not (len(set(node['out_nodes'])) == 1 and len(set(node['in_nodes'])) == 1)
 
     # go through each branching node and start a new contig
     branching_nodes = [node for node in nodes if nodes[node]['branching']]
