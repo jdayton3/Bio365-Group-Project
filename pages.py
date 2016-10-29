@@ -5,7 +5,7 @@ import os, shutil
 def get_sidebar(sections):
     links = []
     for section in sections:
-        links.append('<a href="/html/{1}.html">{0}</a>'.format(section[0], section[1]))
+        links.append('<a href="/Bio365-Group-Project/html/{1}.html">{0}</a>'.format(section[0], section[1]))
     return '''
     <div id="sidebar">
         {}
@@ -40,7 +40,7 @@ def get_footer(prev_page, next_page):
     def get_button_html(id, text, page_num):
         if page_num:
             return '''
-                <button id="{0}" onclick="location.href='/html/{2}.html'">{1}</button>
+                <button id="{0}" onclick="location.href='/Bio365-Group-Project/html/{2}.html'">{1}</button>
             '''.format(id, text, page_num)
         else:
             return ''
