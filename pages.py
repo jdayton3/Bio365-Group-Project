@@ -8,10 +8,15 @@ else:
     path = '/Bio365-Group-Project/pages/'
 
 
-def get_sidebar(sections):
+def get_sidebar(sections, current_page_section):
+
     links = []
     for section in sections:
-        links.append('<a href="{path}{1}">{0}</a>'.format(section[0], section[1], path=path))
+        classes = 'a'
+        if section[0] == current_page_section:
+            classes = 'current-section'
+        links.append('<a class={classes} href="{path}{1}">{0}</a>'
+                        .format(section[0], section[1], path=path, classes=classes))
     return '''
     <div id="sidebar">
         {}
@@ -63,26 +68,27 @@ def get_footer(prev_page, next_page):
 
 
 def generate_html(sections, page, prev, next):
-    sidebar_html = get_sidebar(sections)
+    sidebar_html = get_sidebar(sections, page["section"]) # to style current section
     footer_html = get_footer(prev, next)
     content_html = get_content(page["content"])
     title = page["title"]
     return '''
 <html>
-	<head>
-		<title>Bioinformatics</title>
-		<link rel="stylesheet" href="../../site.css">
-	</head>
-	<body>
-		{sidebar}
-		<div id="main">
-			<div id="content">
-				<h1>{title}</h1>
-				{content}
-			</div>
-			{footer}
-		</div>
-	</body>
+    <head>
+        <title>Bioinformatics</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="../../site.css">
+    </head>
+    <body>
+        {sidebar}
+        <div id="main">
+            <div id="content">
+                <h1>{title}</h1>
+                {content}
+            </div>
+            {footer}
+        </div>
+    </body>
 </html>
 '''.format(sidebar=sidebar_html, title=title, content=content_html, footer = footer_html)
 
