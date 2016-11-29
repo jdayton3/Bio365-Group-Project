@@ -1,27 +1,42 @@
 {
 	"pages": [
 		{
-			"title": "Overview",
+			"title": "What is Bioinformatics?",
 			"section": "Overview",
 			"content": [
-				"Basic intro here",
+				"Let's ask the creators of Jurassic Park!",
 				{ "video": "https://www.youtube.com/embed/iMsJe3TymqY" }
 			]
 		},
 		{
-			"title": "Page 2",
+			"title": "Recreating a DNA Strand",
 			"section": "Overview",
 			"content": [
-				"Here is page 2",
-				{ "picture": "Red_Pig_New.png" },
-				{ "picture": "Red_Pig_New.png" }
+				{ "picture": "JPsequencing.JPG" },
+				"While this may have been true in 1993 when Jurassic Park hit theaters, today, many genomes have been sequenced.",
+				"In the following pages, we'll talk about why we would want to sequence DNA (besides creating dinosaurs) and how this is done."
 			]
 		},
 		{
 			"title": "Page 3",
 			"section": "DNA",
 			"content": [
-				"Here is page 3"
+				"First, let's take a quick quiz.  Which of these angry pigs is red?",
+				{ "picture": "Pigs.png" },
+				"Great!  Let's try a question that's a little bit harder.  Which of these two people has a genetic disease?",
+				{ "picture": "people.png" },
+				"That's a little bit harder.  To figure this out, let's look at their DNA!"
+			]
+		},
+		{
+			"title": "Page 4",
+			"section": "DNA",
+			"content": [
+				"So...  How do we see their DNA?",
+				"We can use this machine",
+				{"picture": "sequence_machine.png"},
+				"to read the characters in their DNA.  Unfortunately, the DNA has to be chopped into a bunch of little pieces first.",
+				{"picture": "fragmentsgenome.png"}
 			]
 		}
 	]
