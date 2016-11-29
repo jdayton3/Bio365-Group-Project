@@ -48,11 +48,12 @@ table {
 }
 
 body {
-	font-family: sans-serif;
+	font-family: 'Lato', sans-serif;
 	display: flex;
 	height: 100%;
 	width: 100%;
 	position: absolute;
+	background: #F3F3F3;
 }
 
 body > div {
@@ -63,15 +64,29 @@ body > div {
 /*	display: inline-block;*/
 	height: 100%;
 	width: 20%;
-	background: #535353;
+	background: #0372C1;
 	color: white;
+	padding: 0;
+	padding-top: 20px;
 }
 
 #sidebar a {
 	display: block;
-	color: white;
+	color: #cae5f8;
 	text-decoration: none;
-	margin-bottom: 5px;
+	padding: 20px;
+	transition: all 0.2s ease;
+}
+
+#sidebar a.current-section {
+	background: rgb(0, 78, 134);
+	color: white;
+	font-weight: bold;
+}
+
+#sidebar a:not(.current-section):hover {
+	background: #19d436;
+	color: white;
 }
 
 #main {
@@ -79,16 +94,23 @@ body > div {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
+	color: #3e3e3e;
+	padding: 20px 35px;
 }
 
 #content {
 	flex-grow: 1;
 }
 
+#content p {
+	margin-bottom: 20px;
+}
+
 #main footer {
 	position: relative;
 	bottom: 0;
 	width: 100%;
+	box-sizing: border-box;
 }
 
 #next {
@@ -104,4 +126,24 @@ h1 {
 	flex-grow: 1;
 	display: flex;
 	justify-content: center;
+}
+
+.picture {
+	text-align: center;
+}
+
+button {
+	border: none;
+	background: rgba(25, 212, 54, 0.85);
+/*	background: #ededed;*/
+	color: white;
+	padding: 10px;
+	font-size: 1em;
+	cursor: pointer;
+	box-shadow: #b1b1b1 0px 2px 5px;
+	transition: all 0.2s ease;
+}
+
+button:hover {
+	background: #19d436;
 }
