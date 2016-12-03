@@ -21,7 +21,7 @@
 			"title": "Page 3",
 			"section": "DNA",
 			"content": [
-				"First, let's take a quick quiz.  Which of these angry pigs is red?",
+				"First, let's take a quick quiz.  Which of these pigs is red?",
 				{ "picture": "Pigs.png" },
 				"Great!  Let's try a question that's a little bit harder.  Which of these two people has a genetic disease?",
 				{ "picture": "people.png" },
@@ -71,7 +71,7 @@
 			"title": "Slide 8",
 			"section": "DNA",
 			"content": [
-				{"picture": "mrdna2.png"},
+				{"picture": "mrdnameme.jpg"},
 				"Genomes are really big!  Computers make finding genetic patterns and mutations fast and awesome.  Bioinformatics is great!"
 			]
 		},
