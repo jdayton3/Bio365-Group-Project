@@ -38,6 +38,50 @@
 				"to read the characters in their DNA.  Unfortunately, the DNA has to be chopped into a bunch of little pieces first.",
 				{"picture": "fragmentsgenome.png"}
 			]
+		},
+		{
+			"title": "DNA reconstruction",
+			"section": "DNA",
+			"content": [
+				"Bioinformaticians have created tools that put these fragments in order",
+				{"picture": "fragmentsalign.png"},
+				"and put them into one big DNA strand.",
+				{"picture": "fragmentsgenome.png"}
+			]
+		},
+		{
+			"title": "Slide 6",
+			"section": "DNA",
+			"content": [
+				{"picture": "people.png"},
+				{"picture": "fragmentsgenome.png"},
+				"Now we can compare the DNA&mdash;look, there's a difference in this gene!",
+				"For less-obvious genetic differences, many tools are available to pull out the differences."
+			]
+		},
+		{
+			"title": "Slide 7",
+			"section": "DNA",
+			"content": [
+				"Now that we see these genetic mutations, we can take preventative health care measures to help this girl with her inherited disease.",
+				"This is a helpful technique for finding people predisposed to certain types of cancer, for example."
+			]
+		},
+		{
+			"title": "Slide 8",
+			"section": "DNA",
+			"content": [
+				{"picture": "mrdna.png"},
+				"Genomes are really big!  Computers make finding genetic patterns and mutations fast and awesome.  Bioinformatics is great!"
+			]
+		},
+		{
+			"title": "Additional Resources",
+			"section": "Additional Resources",
+			"content": [
+				"<a href='https://en.wikipedia.org/wiki/Bioinformatics'>Wikipedia</a>",
+				"<a href='http://bioinformatics.byu.edu/'>BYU Bioinformatics Page</a>"
+			]
 		}
 	]
 }
