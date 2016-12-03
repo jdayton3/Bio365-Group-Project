@@ -68,6 +68,7 @@ body > div {
 	color: white;
 	padding: 0;
 	padding-top: 20px;
+	position: fixed;
 }
 
 #sidebar a {
@@ -96,6 +97,7 @@ body > div {
 	flex-direction: column;
 	color: #3e3e3e;
 	padding: 20px 35px;
+	margin-left: 20%;
 }
 
 #content {
