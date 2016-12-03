@@ -21,7 +21,7 @@
 			"title": "Page 3",
 			"section": "DNA",
 			"content": [
-				"First, let's take a quick quiz.  Which of these angry pigs is red?",
+				"First, let's take a quick quiz.  Which of these pigs is red?",
 				{ "picture": "Pigs.png" },
 				"Great!  Let's try a question that's a little bit harder.  Which of these two people has a genetic disease?",
 				{ "picture": "people.png" },
@@ -36,7 +36,7 @@
 				"We can use this machine",
 				{"picture": "sequence_machine.png"},
 				"to read the characters in their DNA.  Unfortunately, the DNA has to be chopped into a bunch of little pieces first.",
-				{"picture": "fragmentsgenome.png"}
+				{"picture": "fragmentsstart.png"}
 			]
 		},
 		{
@@ -54,8 +54,8 @@
 			"section": "DNA",
 			"content": [
 				{"picture": "people.png"},
-				{"picture": "fragmentsgenome.png"},
 				"Now we can compare the DNA&mdash;look, there's a difference in this gene!",
+				{"picture": "fragmentscompare.png"},
 				"For less-obvious genetic differences, many tools are available to pull out the differences."
 			]
 		},
@@ -71,7 +71,7 @@
 			"title": "Slide 8",
 			"section": "DNA",
 			"content": [
-				{"picture": "mrdna.png"},
+				{"picture": "mrdnameme.jpg"},
 				"Genomes are really big!  Computers make finding genetic patterns and mutations fast and awesome.  Bioinformatics is great!"
 			]
 		},
